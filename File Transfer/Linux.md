@@ -1,11 +1,11 @@
 # HTTP
 
-Python3 webserver:
+Python3 web server:
 ```bash
 python3 -m http.server 80 -d .
 ```
 
-Python2 webserver:
+Python2 web server:
 ```bash
 python2 -m SimpleHTTPServer 80
 ```

@@ -60,6 +60,19 @@ Search for strings in files:
 grep --color=auto -rnw '/' -iIe "PASSW\|PASSWD\|PASSWORD\|PWD\|PASS\|PW" --color=always --exclude-dir={usr,lib,boot,bin,cache} 2>/dev/null
 ```
 
+Show ARP table:
+```bash
+arp -a
+ip neighbour
+ip neigh
+```
+
+Show routing information:
+```bash
+ip route
+route
+```
+
 Snoop on processes:
 https://github.com/DominicBreuker/pspy
 ```bash
