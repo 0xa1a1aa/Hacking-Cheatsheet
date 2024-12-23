@@ -43,3 +43,17 @@ On receiving system (target machine):
 ```bash
 nc -vlnp -q 1 <port> > file.zip
 ```
+
+# Base64
+
+Base64 encode a file to transfer locally, copy-paste the base64 string to the remote host and decode it into a file.
+
+Encode file to transfer on local machine:
+```
+cat file | base64
+```
+
+Decode file on remote machine:
+```
+echo <base64-string> | base64 -d > file
+```
