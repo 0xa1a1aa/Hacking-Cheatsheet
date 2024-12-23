@@ -1,3 +1,11 @@
+# Checklists
+
+https://swisskyrepo.github.io/InternalAllTheThings/redteam/escalation/linux-privilege-escalation/
+
+https://book.hacktricks.xyz/linux-hardening/linux-privilege-escalation-checklist
+
+# Commands
+
 Show Linux version:
 ```bash
 uname -a
