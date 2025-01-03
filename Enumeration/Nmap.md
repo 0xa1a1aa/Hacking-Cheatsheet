@@ -25,7 +25,26 @@ sudo nmap -v -Pn -sU -sV -T4 -oA udp_default <ip>
 ```
 
 ---
-# Additional options
+# Firewall and IDS/IPS Evasion
+
+https://nmap.org/book/man-bypass-firewalls-ids.html
+
+**TCP ACK scan (`-sA`)**
+Packets with the `ACK` flag are often passed by the firewall because the firewall cannot determine whether the connection was first established from the external network or the internal network.
+
+## Detect IDS/IPS
+
+One method to determine whether a IPS system is present in the target network is to scan from a single host (virtual private servers `VPS`). If at any time this host is blocked and has no access to the target network, we know that the administrator has taken some security measures. Accordingly, we can continue our penetration test with another `VPS`.
+
+## DNS Proxying
+
+Packets with a specific source port (e.g. TCP port 53 for DNS) may be whitelisted by the firewall.
+```
+sudo <nmap cmd> --source-port 53
+```
+
+---
+# Some additional options
 
 | Argument             | Description                                                              |
 | -------------------- | ------------------------------------------------------------------------ |
