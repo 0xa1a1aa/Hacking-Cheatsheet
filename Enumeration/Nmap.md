@@ -29,7 +29,8 @@ sudo nmap -v -Pn -sU -sV -T4 -oA udp_default <ip>
 
 https://nmap.org/book/man-bypass-firewalls-ids.html
 
-**TCP ACK scan (`-sA`)**
+## TCP ACK scan (`-sA`)
+
 Packets with the `ACK` flag are often passed by the firewall because the firewall cannot determine whether the connection was first established from the external network or the internal network.
 
 ## Detect IDS/IPS
