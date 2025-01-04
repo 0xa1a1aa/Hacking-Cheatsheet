@@ -44,6 +44,11 @@ Packets with a specific source port (e.g. TCP port 53 for DNS) may be whiteliste
 sudo <nmap cmd> --source-port 53
 ```
 
+Attempt to connect to the target port with netcat:
+```
+sudo nc -p 53 <remote-ip> <remote-port>
+```
+
 ---
 # Some additional options
 
@@ -55,7 +60,10 @@ sudo <nmap cmd> --source-port 53
 | `--disable-arp-ping` | disable ARP pings. (If we want to use `-PE` we need to use this option)  |
 # Scripts
 
-Nmap scripts are located at `/usr/share/nmap/scripts/`
+Nmap scripts are located at:
+```
+/usr/share/nmap/scripts/
+```
 
 List all default scripts (executed with the `-sC` option): 
 ```
